@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service ScoreReader {
+    rpc Read (ScoreRequest) returns (ScoreResponse);
+}
+
+message ScoreRequest {
+    string sourceid = 1;
+}
+
+message ScoreResponse {
+    string data = 1;
+}
